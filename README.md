@@ -35,8 +35,8 @@ you → coding agent → codebase_investigate → Jev on a shortlist → files +
 ## Integration
 
 ```bash
-git clone https://github.com/jimmyhealer/jev-semantic-explorer
-cd jev-semantic-explorer
+git clone https://github.com/jimmyhealer/jevex
+cd jevex
 pip install -e ".[mcp]"
 ```
 

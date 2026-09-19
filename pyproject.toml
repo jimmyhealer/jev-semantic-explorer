@@ -21,7 +21,7 @@ mcp = ["mcp>=1.9.0"]
 eval = ["datasets>=3.0.0"]
 
 [project.urls]
-Homepage = "https://github.com/jimmyhealer/jev-semantic-explorer"
+Homepage = "https://github.com/jimmyhealer/jevex"
 
 [project.scripts]
 jevex = "jev_explorer.cli:main"
