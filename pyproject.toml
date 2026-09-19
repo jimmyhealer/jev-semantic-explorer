@@ -25,6 +25,7 @@ Homepage = "https://github.com/jimmyhealer/jevex"
 
 [project.scripts]
 jevex = "jev_explorer.cli:main"
+jevex-mcp = "jev_explorer.mcp_server:main"
 jev-explorer = "jev_explorer.cli:main"
 jev-explorer-mcp = "jev_explorer.mcp_server:main"
 

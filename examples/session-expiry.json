@@ -1,0 +1,16 @@
+{
+  "question": "Where is session expiry actually enforced?",
+  "status": "sufficient",
+  "source_of_truth": [
+    {
+      "path": "src/auth/session.py",
+      "symbol": "assert_session_fresh",
+      "range": [32, 35]
+    }
+  ],
+  "regions": [
+    {"path": "src/auth/session.py", "start": 32, "end": 35, "role": "source_of_truth"},
+    {"path": "src/middleware/require_auth.py", "start": 11, "end": 16, "role": "caller"},
+    {"path": "tests/test_session.py", "start": 1, "end": 25, "role": "test"}
+  ]
+}
