@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jev-explorer"
+version = "0.1.0"
+description = "Stop grepping. Ask a repo where behavior is actually enforced. One MCP tool for coding agents."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+keywords = ["mcp", "coding-agent", "jev", "typesafe", "codebase"]
+dependencies = [
+    "python-dotenv>=1.0.0",
+    "typesafe-sdk>=0.5.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+mcp = ["mcp>=1.9.0"]
+eval = ["datasets>=3.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/jimmyhealer/jev-semantic-explorer"
+
+[project.scripts]
+jevex = "jev_explorer.cli:main"
+jev-explorer = "jev_explorer.cli:main"
+jev-explorer-mcp = "jev_explorer.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+jev_explorer = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
